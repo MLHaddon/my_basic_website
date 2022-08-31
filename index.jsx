@@ -10,8 +10,12 @@ app.get('/', (req, res) => {
   res.send("Hello World");
 });
 
+app.get('/:id', (req, res) => {
+  res.send('The request that you made is ' + req.params.id);
+});
+
 app.post('/', (req, res) => {
-  res.send("You just called the post method at '/'!\n");
+  res.send(`You just called the post method at '/'!\n`);
 });
 
 app.use('/users', users);
